@@ -16,7 +16,11 @@
     }
   },
   "sideEffects": false,
-  "files": ["dist", "README.md", "LICENSE"],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsup src/index.ts --dts --format esm,cjs --sourcemap --clean",
     "dev": "tsup src/index.ts --dts --format esm,cjs --sourcemap --watch",
@@ -57,8 +61,18 @@
   "engines": {
     "node": ">=18"
   },
-  "keywords": ["typescript", "library", "solid", "template"],
-  "repository": {"type": "git", "url": "https://github.com/beniwalsanjay/egenome-libs.git"},
-  "bugs": {"url": "https://github.com/beniwalsanjay/egenome-libs/issues"},
+  "keywords": [
+    "typescript",
+    "library",
+    "solid",
+    "template"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beniwalsanjay/egenome-libs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/beniwalsanjay/egenome-libs/issues"
+  },
   "homepage": "https://github.com/beniwalsanjay/egenome-libs#readme"
 }

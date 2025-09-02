@@ -119,10 +119,7 @@ npm publish --access public
 
 ```bash
 # Check if your package is published
-npm view egenome-libs
-
-# Or for scoped packages
-npm view @your-username/egenome-libs
+npm view @beniwalsanjay/egenome-libs
 ```
 
 ## 5. Automated Publishing with Semantic Release
@@ -224,11 +221,10 @@ Test that users can install your package:
 # Test installation in a new directory
 mkdir test-install && cd test-install
 npm init -y
-npm install egenome-libs
-# Or: npm install @your-username/egenome-libs
+npm install @beniwalsanjay/egenome-libs
 
 # Test import
-node -e "console.log(require('egenome-libs'))"
+node -e "console.log(require('@beniwalsanjay/egenome-libs'))"
 ```
 
 ### Update Documentation
@@ -252,7 +248,7 @@ Your published package includes:
 
 ```bash
 # Install the package
-npm install egenome-libs
+npm install @beniwalsanjay/egenome-libs
 
 # Install optional dependencies for Redis support
 npm install ioredis
@@ -269,7 +265,7 @@ import {
   StoreFactory, 
   StoreType, 
   cacheItem 
-} from 'egenome-libs';
+} from '@beniwalsanjay/egenome-libs';
 
 // Get DI container
 const container = DIContainer.getInstance();
@@ -316,7 +312,7 @@ const result = await cacheItem({
 If you need to deprecate a version:
 
 ```bash
-npm deprecate egenome-libs@1.0.0 "This version has been deprecated"
+npm deprecate @beniwalsanjay/egenome-libs@1.0.0 "This version has been deprecated"
 ```
 
 ---

@@ -1,4 +1,4 @@
-# eGenome-Libs
+# @beniwalsanjay/egenome-libs
 
 A comprehensive, production-ready TypeScript library for building scalable caching solutions with SOLID principles.
 
@@ -20,7 +20,7 @@ A comprehensive, production-ready TypeScript library for building scalable cachi
 ## 📦 Installation
 
 ```bash
-npm install egenome-libs
+npm install @beniwalsanjay/egenome-libs
 ```
 
 ### Optional Dependencies
@@ -42,7 +42,7 @@ npm install --save-dev @types/memcached
 ### Basic Cache Usage
 
 ```typescript
-import { InMemoryStore, simpleCacheItem } from 'egenome-libs';
+import { InMemoryStore, simpleCacheItem } from '@beniwalsanjay/egenome-libs';
 
 const store = new InMemoryStore<string>();
 
@@ -63,7 +63,7 @@ if (result.ok) {
 ### Enhanced Cache with TTL and Statistics
 
 ```typescript
-import { EnhancedMemoryStore, cacheItem } from 'egenome-libs';
+import { EnhancedMemoryStore, cacheItem } from '@beniwalsanjay/egenome-libs';
 
 const store = new EnhancedMemoryStore<UserData>();
 
@@ -95,7 +95,7 @@ if (stats.ok) {
 ### Namespaced Store
 
 ```typescript
-import { InMemoryStore, NamespacedStore } from 'egenome-libs';
+import { InMemoryStore, NamespacedStore } from '@beniwalsanjay/egenome-libs';
 
 const baseStore = new InMemoryStore();
 const userCache = new NamespacedStore(baseStore, 'users');
@@ -111,7 +111,7 @@ await productCache.set('123', { title: 'Widget' });
 ### Redis Cache
 
 ```typescript
-import { RedisStore, cacheItem } from 'egenome-libs';
+import { RedisStore, cacheItem } from '@beniwalsanjay/egenome-libs';
 
 const redisStore = new RedisStore<UserData>({
   host: 'localhost',
@@ -139,7 +139,7 @@ import {
   RedisStore, 
   MultiTierStore,
   cacheItem 
-} from 'egenome-libs';
+} from '@beniwalsanjay/egenome-libs';
 
 // L1: Fast memory cache
 const l1Cache = new EnhancedMemoryStore<UserData>();
@@ -176,7 +176,7 @@ const result = await cacheItem({
 All operations return a `Result<T, E>` type for functional error handling:
 
 ```typescript
-import { Ok, Err, ResultUtils } from 'egenome-libs';
+import { Ok, Err, ResultUtils } from '@beniwalsanjay/egenome-libs';
 
 const result = await store.get('key');
 
@@ -203,7 +203,7 @@ import {
   isCacheError, 
   StoreErrorCode,
   CacheErrorCode 
-} from 'egenome-libs';
+} from '@beniwalsanjay/egenome-libs';
 
 const result = await store.get('key');
 if (!result.ok) {
@@ -220,7 +220,7 @@ if (!result.ok) {
 Flexible configuration system:
 
 ```typescript
-import { createConfig, EnhancedMemoryStore } from 'egenome-libs';
+import { createConfig, EnhancedMemoryStore } from '@beniwalsanjay/egenome-libs';
 
 const config = createConfig({
   defaultTtlMs: 10 * 60 * 1000, // 10 minutes
@@ -379,7 +379,7 @@ import {
   cacheItem,
   createConfig,
   ConsoleLogger 
-} from 'egenome-libs';
+} from '@beniwalsanjay/egenome-libs';
 
 // Configure the library
 const config = createConfig({

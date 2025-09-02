@@ -22,9 +22,14 @@ coverage/
 .env.*
 !.env.example
 
-# Package files
-package-lock.json
+# Package files  
 yarn.lock
+pnpm-lock.yaml
+# Note: package-lock.json is tracked for library consistency
+
+# Development
+*.tsbuildinfo
+.turbo
 
 # Miscellaneous
 .DS_Store
@@ -34,5 +39,4 @@ yarn.lock
 *.swo 
 .cursorrules
 .cursor
-.cursorrules
 AGENTS.md

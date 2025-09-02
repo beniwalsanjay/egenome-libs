@@ -1,0 +1,38 @@
+# Build output
+dist/
+build/
+
+# Dependencies
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# Coverage directory
+coverage/
+
+# Cache
+.npm
+.eslintcache
+.cache
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Package files
+package-lock.json
+yarn.lock
+
+# Miscellaneous
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo 
+.cursorrules
+.cursor
+.cursorrules
+AGENTS.md

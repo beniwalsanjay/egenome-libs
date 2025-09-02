@@ -1,0 +1,64 @@
+{
+  "name": "@beniwalsanjay/egenome-libs",
+  "version": "1.0.0",
+  "description": "A scalable TypeScript library for eGenome.",
+  "license": "ISC",
+  "author": "sanjaybeniwal",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "sideEffects": false,
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format esm,cjs --sourcemap --clean",
+    "dev": "tsup src/index.ts --dts --format esm,cjs --sourcemap --watch",
+    "lint": "eslint . --ext .ts,.tsx",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build && npm run test",
+    "release": "semantic-release"
+  },
+  "peerDependencies": {
+    "ioredis": "^5.3.0"
+  },
+  "dependencies": {
+    "inversify": "^6.0.2",
+    "reflect-metadata": "^0.2.2"
+  },
+  "optionalDependencies": {
+    "ioredis": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsdoc": "^48.2.7",
+    "eslint-plugin-unused-imports": "^3.1.0",
+    "prettier": "^3.3.3",
+    "tsup": "^8.0.2",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5",
+    "semantic-release": "^23.0.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^12.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": ["typescript", "library", "solid", "template"],
+  "repository": {"type": "git", "url": "https://github.com/beniwalsanjay/egenome-libs.git"},
+  "bugs": {"url": "https://github.com/beniwalsanjay/egenome-libs/issues"},
+  "homepage": "https://github.com/beniwalsanjay/egenome-libs#readme"
+}
